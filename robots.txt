@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zsmet-hub.github.io/findex-site/sitemap.xml

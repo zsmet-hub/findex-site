@@ -1,0 +1,19 @@
+{
+  "appName": "FinDex",
+  "tagline": "Scan. Track. Care.",
+  "legalOperatorName": "Zach Smet",
+  "publicSupportEmail": "findexsupport@gmail.com",
+  "governingJurisdiction": "Wisconsin, United States",
+  "minimumAge": 13,
+  "effectiveDate": "2026-07-13",
+  "websiteOrigin": "https://zsmet-hub.github.io",
+  "siteBasePath": "/findex-site/",
+  "privacyPath": "/privacy/",
+  "termsPath": "/terms/",
+  "supportPath": "/support/",
+  "privacyChoicesPath": "/privacy-choices/",
+  "deleteAccountPath": "/delete-account/",
+  "appleStandardEulaUrl": "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
+  "hostingProvider": "GitHub Pages",
+  "repository": "zsmet-hub/findex-site"
+}

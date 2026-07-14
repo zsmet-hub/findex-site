@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy | FinDex</title>
+  <meta name="description" content="How FinDex collects, uses, shares, retains, and deletes information.">
+  <meta name="theme-color" content="#eaf8ff">
+  <link rel="canonical" href="https://zsmet-hub.github.io/findex-site/privacy/">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FinDex">
+  <meta property="og:title" content="Privacy Policy | FinDex">
+  <meta property="og:description" content="How FinDex handles account, aquarium, photo, AI, and subscription information.">
+  <meta property="og:url" content="https://zsmet-hub.github.io/findex-site/privacy/">
+  <meta property="og:image" content="https://zsmet-hub.github.io/findex-site/assets/findex-icon.png">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../" aria-label="FinDex home"><img src="../assets/favicon.svg" alt=""><span>FinDex</span></a>
+      <nav aria-label="Main navigation"><a href="../support/">Support</a><a href="./" aria-current="page">Privacy</a><a href="../terms/">Terms</a></nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="shell legal-main">
+    <header>
+      <p class="effective">Effective July 13, 2026</p>
+      <h1>Privacy Policy</h1>
+      <p>This Privacy Policy explains how Zach Smet, the operator of FinDex ("FinDex," "we," "us," or "our"), handles information when you use the FinDex mobile application or this public website. Contact <a href="mailto:findexsupport@gmail.com">findexsupport@gmail.com</a> with privacy questions.</p>
+    </header>
+
+    <h2>1. Scope</h2>
+    <p>This policy covers the FinDex app, FinDex Pro subscription features, optional AI features, support communications, and this website. It does not replace the privacy notices of Apple or the service providers described below.</p>
+
+    <h2>2. Information FinDex handles</h2>
+    <h3>Account and authentication information</h3>
+    <p>FinDex requires an account. We use Supabase Authentication to process your email address, password authentication record, email-verification status, account timestamps, session information, and a generated Supabase user UUID. FinDex does not receive your readable password from Supabase after authentication.</p>
+    <p>The UUID links your account to your FinDex records and is also used as your RevenueCat App User ID so purchases can be associated with the signed-in account. A profile table can store an optional display name, although the current app does not ask for one.</p>
+
+    <h3>Aquarium and fish records</h3>
+    <p>You may create tank records containing a name, water type, volume, temperature, setup date, cover image, notes, and timestamps. You may create fish or livestock records containing a tank assignment, selected or entered species names, custom name, quantity, acquisition date, health status, photo, notes, and timestamps. These records are linked to your account and stored through Supabase.</p>
+    <p>The app also includes a reference species catalog. Species searches are sent to Supabase to return matching catalog entries; FinDex does not intentionally maintain a separate species-search-history table.</p>
+
+    <h3>Photos</h3>
+    <p>When you choose to take or select a fish or aquarium photo, the app may resize and convert it before upload. Saved record and scan images are stored in a private Supabase Storage bucket under an account-specific path. The app uses time-limited signed URLs to display them. Camera and photo-library access are optional and requested only when you choose a photo feature.</p>
+
+    <h3>AI prompts, results, and history</h3>
+    <p>When you use an AI feature, FinDex may store the question you submit, attached or selected image path, conversation and message records, scan status and metadata, fish-identification candidates, aquarium observations, user-confirmed identification, care-report input snapshots and results, model and prompt versions, provider response identifier, token counts, errors, and timestamps. This information is linked to your account and stored through Supabase so the app can display eligible history, avoid duplicate processing, and apply access rules.</p>
+
+    <h3>AI consent and usage records</h3>
+    <p>FinDex stores the version and timestamps of your AI data-sharing acceptance or withdrawal. It also stores a server-managed complimentary allowance and an AI usage ledger. The ledger can include the feature, request key, access source, credit amount, reservation status, whether provider processing began, result linkage, errors, model, token usage, provider request ID, and timestamps. These records enforce the shared two-use allowance, monthly and hourly limits, retries, and security controls.</p>
+
+    <h3>Subscriptions and purchases</h3>
+    <p>Apple processes App Store payments. FinDex does not receive your complete payment-card details. RevenueCat manages product offerings, purchase and restore flows, customer and entitlement status, and subscription management. FinDex receives or caches information such as the RevenueCat customer identifier, product identifier, active entitlement, expiration or grace-period dates, status-check time, and purchase or transaction status made available by Apple and RevenueCat.</p>
+
+    <h3>Support communications</h3>
+    <p>If you contact support, we receive the email address and content you choose to send, along with attachments and a Support ID if you include one. The public support mailbox is provided through Google. Do not send a password, API key, complete payment-card number, or an unnecessary sensitive photo.</p>
+
+    <h3>Technical and operational information</h3>
+    <p>FinDex service providers may automatically process IP address, device and operating-system details, app version, request time, request or response metadata, network and error information, update checks, store identifiers, and similar operational information needed to deliver, secure, troubleshoot, and account for their services. Supabase maintains API, authentication, database, Storage, and Edge Function logs according to the project plan and settings. Apple may provide crash or diagnostic information under the user's and developer's Apple settings.</p>
+    <p>FinDex has not added a third-party advertising, behavioral analytics, session-replay, or crash-reporting SDK. This website contains no FinDex analytics, advertising pixel, account login, form, or cookie-setting script. GitHub may still process ordinary web request and usage information when it hosts and delivers these pages.</p>
+
+    <h2>3. Optional AI processing and AI data sharing</h2>
+    <div class="callout">
+      <p><strong>AI features are optional.</strong> Manual tank and fish tracking remains available if you decline or withdraw AI data-sharing consent.</p>
+    </div>
+    <p>Before an AI request can be sent, FinDex asks you to accept a separate AI data-sharing disclosure. When you initiate a supported AI feature after accepting, FinDex sends OpenAI the selected or attached photo when applicable, your question or requested task, recent relevant conversation content, and relevant saved tank, fish, species, and care details needed for that request. The code does not intentionally place your email address or Supabase UUID in the AI prompt.</p>
+    <p>FinDex calls OpenAI's Responses API from a Supabase Edge Function and sets <code>store</code> to <code>false</code>. OpenAI states that API data is not used to train its models by default unless an account opts in. OpenAI may still retain limited content and metadata for safety and abuse monitoring under its current API data controls, generally for up to 30 days by default, with limited exceptions or longer retention when legally required. FinDex does not claim that its OpenAI project has Zero Data Retention.</p>
+    <p>AI output may be incomplete or incorrect. A user-confirmed fish identification is treated as user-provided context, not independent verification. FinDex provides general aquarium guidance, not veterinary diagnosis or medication instructions.</p>
+
+    <h2>4. Why we use information</h2>
+    <ul>
+      <li>Create, authenticate, verify, secure, and recover accounts.</li>
+      <li>Store, display, edit, and delete tank, fish, note, photo, and history records.</li>
+      <li>Perform AI analysis only when a user chooses it and has active consent.</li>
+      <li>Provide two lifetime complimentary AI analyses per eligible verified account.</li>
+      <li>Verify FinDex Pro access, process purchases and restores, apply limits, and prevent duplicate requests.</li>
+      <li>Operate, protect, troubleshoot, improve, and support FinDex.</li>
+      <li>Comply with legal obligations and enforce applicable terms.</li>
+    </ul>
+
+    <h2>5. Service providers and disclosures</h2>
+    <ul>
+      <li><strong>Supabase:</strong> authentication, PostgreSQL database, private image Storage, Edge Functions, and operational logs.</li>
+      <li><strong>OpenAI:</strong> user-requested text and image analysis through the Responses API.</li>
+      <li><strong>RevenueCat:</strong> subscription offerings, purchase and restore support, customer records, entitlement verification, and subscription management.</li>
+      <li><strong>Apple:</strong> iOS distribution, App Store purchases, subscription billing, refunds, TestFlight, and optional platform diagnostics.</li>
+      <li><strong>Expo/EAS:</strong> managed builds, signing and distribution workflows, app updates, and related operational logs.</li>
+      <li><strong>GitHub Pages:</strong> static hosting for this public website and ordinary website request logs.</li>
+      <li><strong>Google:</strong> delivery and storage of messages sent to the public support mailbox.</li>
+    </ul>
+    <p>We may also disclose information when required by law, to respond to valid legal process, or when reasonably necessary to protect users, FinDex, service providers, or others.</p>
+
+    <h2>6. Advertising, sale, and cross-app tracking</h2>
+    <p>FinDex does not sell personal information. FinDex does not use personal information for cross-context behavioral advertising and does not configure cross-app tracking. The reviewed app includes no advertising network or data-broker integration. If these practices change, this policy and applicable consent and store disclosures must be updated first.</p>
+
+    <h2>7. Retention</h2>
+    <p>Account records, aquarium content, private photos, AI history, consent records, allowance records, and the FinDex copy of subscription status are generally kept while your account exists, unless you delete or replace an individual supported record sooner. A deleted AI result does not restore a complimentary use because the usage ledger records whether provider processing began.</p>
+    <p>Operational logs are retained according to each provider's service plan and settings. Supabase database backups may retain deleted database content until the applicable backup or recovery window expires. OpenAI, RevenueCat, Apple, GitHub, Expo, Google, and other processors may retain independent operational, security, transaction, backup, or legal records under their own policies. Support messages are kept only as long as reasonably needed to address the request, security concerns, disputes, or legal obligations, then deleted from the active support mailbox when no longer needed.</p>
+
+    <h2>8. Editing records, deleting photos, and account deletion</h2>
+    <p>You can edit tank and fish details in the app. Deleting a tank removes its tank photo and related tank reports and leaves fish records in the library without a tank. Deleting a fish removes its saved fish photo and record. Replacing a saved record photo causes FinDex to attempt removal of the previous image.</p>
+    <p>To delete the entire FinDex account, open <strong>Settings</strong>, choose <strong>Delete Account</strong>, review the information, enter the current password, type <strong>DELETE</strong>, and confirm. The server first removes account-owned image objects, then deletes the Supabase authentication account. Database relationships are configured to remove the active profile, tanks, fish, scans, AI results, chats, care reports, consent, allowance and usage records, deletion-attempt record, and FinDex subscription-status cache.</p>
+    <p>Account deletion is designed to remove active FinDex application data immediately after successful confirmation, while provider backups and independent processor records may age out later. RevenueCat customer deletion is requested during the flow; if it cannot be confirmed, the app reports that processor cleanup remains pending. Apple and RevenueCat may retain transaction records for store, fraud, accounting, or legal purposes.</p>
+    <div class="callout warning">
+      <p><strong>Deleting a FinDex account does not cancel an Apple subscription.</strong> Manage or cancel FinDex Pro separately in Apple subscription settings.</p>
+    </div>
+
+    <h2>9. Your privacy choices</h2>
+    <p>You can decline optional AI features, withdraw future AI data-sharing consent in Settings, later review and accept the disclosure again, edit or delete supported records and photos, restore purchases, manage an Apple subscription, and delete the FinDex account. See <a href="../privacy-choices/">Privacy Choices</a> for the exact in-app controls.</p>
+    <p>You may email <a href="mailto:findexsupport@gmail.com">findexsupport@gmail.com</a> to ask a privacy question or request help with rights that may apply where you live. We may need to verify that a request relates to your account. Email is not the normal substitute for the in-app deletion flow.</p>
+
+    <h2>10. AI consent withdrawal</h2>
+    <p>Open Settings, choose <strong>View AI Data Sharing Information</strong>, and select <strong>Withdraw AI Data Sharing Consent</strong>. Withdrawal blocks future OpenAI requests until you accept again. It does not erase AI processing already completed; delete individual records where supported or delete the account to remove active FinDex copies.</p>
+
+    <h2>11. Security</h2>
+    <p>FinDex uses account authentication, row-level database policies, private Storage rules, server-side authorization, limited signed image URLs, input validation, and HTTPS connections provided by its platforms. Administrative keys remain in server secrets rather than the mobile bundle. No method of transmission or storage is perfectly secure, so we cannot guarantee absolute security.</p>
+
+    <h2>12. Children's privacy</h2>
+    <p>Children under 13 may not create or control a FinDex account independently. A parent or legal guardian may use their own account with a child under supervision and is responsible for account activity, photos, and any optional AI use. FinDex does not intentionally request a child's date of birth or knowingly create an independent account for a child under 13. Contact <a href="mailto:findexsupport@gmail.com">findexsupport@gmail.com</a> if you believe a child provided personal information without appropriate adult involvement.</p>
+
+    <h2>13. International processing</h2>
+    <p>FinDex and its service providers may process information in the United States and other countries where they operate. Those locations may have data-protection rules different from those where you live. Applicable legal rights are not waived by this statement.</p>
+
+    <h2>14. Changes to this policy</h2>
+    <p>We may update this policy as FinDex, its providers, or legal requirements change. The revised page will show a new effective date, and we will provide additional notice when appropriate.</p>
+
+    <h2>15. Contact</h2>
+    <p>Privacy questions may be sent to <a href="mailto:findexsupport@gmail.com">findexsupport@gmail.com</a>.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div><p class="footer-title">FinDex</p><p class="footer-tagline">Scan. Track. Care.</p></div>
+      <nav aria-label="Legal and support links"><a href="./">Privacy</a><a href="../terms/">Terms</a><a href="../support/">Support</a><a href="../privacy-choices/">Privacy Choices</a><a href="../delete-account/">Account Deletion</a></nav>
+      <p>Contact <a href="mailto:findexsupport@gmail.com">findexsupport@gmail.com</a>.</p>
+      <p class="copyright">Copyright 2026 Zach Smet. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

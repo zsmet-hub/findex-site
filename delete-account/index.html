@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Account Deletion | FinDex</title>
+  <meta name="description" content="How to permanently delete a FinDex account and its active application data.">
+  <meta name="theme-color" content="#eaf8ff">
+  <link rel="canonical" href="https://zsmet-hub.github.io/findex-site/delete-account/">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FinDex">
+  <meta property="og:title" content="Account Deletion | FinDex">
+  <meta property="og:description" content="How to permanently delete a FinDex account and its active data.">
+  <meta property="og:url" content="https://zsmet-hub.github.io/findex-site/delete-account/">
+  <meta property="og:image" content="https://zsmet-hub.github.io/findex-site/assets/findex-icon.png">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../" aria-label="FinDex home"><img src="../assets/favicon.svg" alt=""><span>FinDex</span></a>
+      <nav aria-label="Main navigation"><a href="../support/">Support</a><a href="../privacy/">Privacy</a><a href="../terms/">Terms</a></nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="shell legal-main">
+    <header>
+      <p class="effective">Account control</p>
+      <h1>Delete your FinDex account</h1>
+      <p>Account deletion is initiated inside the signed-in FinDex app. The static website cannot authenticate you or perform privileged deletion.</p>
+    </header>
+
+    <h2>Delete the account in FinDex</h2>
+    <ol>
+      <li>Open FinDex and sign in to the account you want to delete.</li>
+      <li>Open <strong>Settings</strong>.</li>
+      <li>Choose <strong>Delete Account</strong>.</li>
+      <li>Review the data-removal and Apple subscription information.</li>
+      <li>Enter the current FinDex password.</li>
+      <li>Type <strong>DELETE</strong> in the confirmation field.</li>
+      <li>Choose <strong>Delete Account</strong> and confirm the final prompt.</li>
+    </ol>
+    <p>The app reauthenticates the account before calling the protected deletion service. A successful deletion signs the app out and returns it to sign in.</p>
+
+    <h2>Active data removed</h2>
+    <p>The deletion service removes account-owned images before deleting the Supabase authentication user. Database relationships then remove the active FinDex copy of:</p>
+    <ul>
+      <li>Authentication account, email association, and profile record</li>
+      <li>Tank records, setup details, notes, and tank photos</li>
+      <li>Fish or livestock records, health status, notes, and fish photos</li>
+      <li>Scan metadata, uploaded scan images, and user-confirmed identifications</li>
+      <li>AI identification and aquarium-analysis results</li>
+      <li>AI conversations, questions, attached image paths, answers, and context snapshots</li>
+      <li>AI care reports and report input snapshots</li>
+      <li>AI data-sharing consent records</li>
+      <li>Complimentary allowance, AI usage and rate-limit records, and request linkage</li>
+      <li>FinDex's cached RevenueCat entitlement and subscription-status record</li>
+      <li>Account-deletion attempt record</li>
+    </ul>
+
+    <h2>Processor records and backups</h2>
+    <p>FinDex requests deletion of the RevenueCat customer during account deletion. If RevenueCat deletion cannot be confirmed, the app reports that processor cleanup remains pending. RevenueCat and Apple may retain transaction information required for store operations, fraud prevention, accounting, disputes, or law.</p>
+    <p>Supabase backups, service logs, OpenAI safety records, and other processor systems may retain limited information until their configured recovery, security, or legal period expires. FinDex does not promise immediate removal from every backup. See the <a href="../privacy/">Privacy Policy</a> for more detail.</p>
+
+    <h2>Canceling FinDex Pro is separate</h2>
+    <div class="callout warning">
+      <p><strong>Deleting the FinDex account does not automatically cancel an Apple subscription.</strong> Apple billing can continue until the subscription is canceled.</p>
+    </div>
+    <p>Before or after deletion, open iPhone <strong>Settings</strong>, choose your name, choose <strong>Subscriptions</strong>, then select FinDex and follow Apple's cancellation options. You can also choose <strong>Manage Subscription</strong> on the FinDex deletion screen before completing account deletion.</p>
+
+    <h2>If in-app deletion fails</h2>
+    <p>Try again after checking the network connection and current password. If the signed-in deletion flow repeatedly fails, email <a href="mailto:findexsupport@gmail.com">findexsupport@gmail.com</a> and include the non-secret Support ID shown in FinDex Settings plus the exact error message. Never send your password.</p>
+    <p>Email support is for troubleshooting a failed in-app flow; it is not the normal substitute for initiating deletion inside FinDex. We may need to verify account ownership before assisting.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div><p class="footer-title">FinDex</p><p class="footer-tagline">Scan. Track. Care.</p></div>
+      <nav aria-label="Legal and support links"><a href="../privacy/">Privacy</a><a href="../terms/">Terms</a><a href="../support/">Support</a><a href="../privacy-choices/">Privacy Choices</a><a href="./">Account Deletion</a></nav>
+      <p>Contact <a href="mailto:findexsupport@gmail.com">findexsupport@gmail.com</a>.</p>
+      <p class="copyright">Copyright 2026 Zach Smet. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
