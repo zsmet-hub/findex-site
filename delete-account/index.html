@@ -38,9 +38,9 @@
       <li>Open <strong>Settings</strong>.</li>
       <li>Choose <strong>Delete Account</strong>.</li>
       <li>Review the data-removal and Apple subscription information.</li>
-      <li>Enter the current FinDex password.</li>
       <li>Type <strong>DELETE</strong> in the confirmation field.</li>
-      <li>Choose <strong>Delete Account</strong> and confirm the final prompt.</li>
+      <li>Choose <strong>Delete Account</strong>, then confirm your identity with a connected Apple, Google, or email sign-in method. Email users enter their current FinDex password.</li>
+      <li>If Apple is connected, FinDex also requests a fresh Apple authorization for revocation. Confirm the final prompt to continue.</li>
     </ol>
     <p>The app reauthenticates the account before calling the protected deletion service. A successful deletion signs the app out and returns it to sign in.</p>
 
@@ -62,6 +62,7 @@
 
     <h2>Processor records and backups</h2>
     <p>FinDex requests deletion of the RevenueCat customer during account deletion. If RevenueCat deletion cannot be confirmed, the app reports that processor cleanup remains pending. RevenueCat and Apple may retain transaction information required for store operations, fraud prevention, accounting, disputes, or law.</p>
+    <p>For an Apple-linked account, FinDex verifies that the fresh Apple authorization belongs to the signed-in Supabase identity and requests revocation before deleting active FinDex data. If Apple cannot be verified or reached, deletion stops with a retryable error rather than silently skipping revocation.</p>
     <p>Supabase backups, service logs, OpenAI safety records, and other processor systems may retain limited information until their configured recovery, security, or legal period expires. FinDex does not promise immediate removal from every backup. See the <a href="../privacy/">Privacy Policy</a> for more detail.</p>
 
     <h2>Canceling FinDex Pro is separate</h2>
@@ -71,7 +72,7 @@
     <p>Before or after deletion, open iPhone <strong>Settings</strong>, choose your name, choose <strong>Subscriptions</strong>, then select FinDex and follow Apple's cancellation options. You can also choose <strong>Manage Subscription</strong> on the FinDex deletion screen before completing account deletion.</p>
 
     <h2>If in-app deletion fails</h2>
-    <p>Try again after checking the network connection and current password. If the signed-in deletion flow repeatedly fails, email <a href="mailto:findexsupport@gmail.com">findexsupport@gmail.com</a> and include the non-secret Support ID shown in FinDex Settings plus the exact error message. Never send your password.</p>
+    <p>Try again after checking the network connection and connected sign-in method. If the signed-in deletion flow repeatedly fails, email <a href="mailto:findexsupport@gmail.com">findexsupport@gmail.com</a> and include the non-secret Support ID shown in FinDex Settings plus the exact error message. Never send your password, verification link, provider token, or Apple authorization code.</p>
     <p>Email support is for troubleshooting a failed in-app flow; it is not the normal substitute for initiating deletion inside FinDex. We may need to verify account ownership before assisting.</p>
   </main>
 

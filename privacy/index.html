@@ -37,8 +37,9 @@
 
     <h2>2. Information FinDex handles</h2>
     <h3>Account and authentication information</h3>
-    <p>FinDex requires an account. We use Supabase Authentication to process your email address, password authentication record, email-verification status, account timestamps, session information, and a generated Supabase user UUID. FinDex does not receive your readable password from Supabase after authentication.</p>
-    <p>The UUID links your account to your FinDex records and is also used as your RevenueCat App User ID so purchases can be associated with the signed-in account. A profile table can store an optional display name, although the current app does not ask for one.</p>
+    <p>FinDex requires an account. We use Supabase Authentication to process your email address, password authentication record when email sign-in is used, email-verification status, connected sign-in methods, account timestamps, session information, and a generated Supabase user UUID. FinDex does not receive your readable password from Supabase after authentication.</p>
+    <p>When offered and selected, Sign in with Apple or Google sign-in may provide Supabase and FinDex with a provider identifier, verified email claim, and optional name information. Apple may provide a private-relay email address. FinDex accepts relay addresses and uses provider name information only to fill an otherwise blank account profile. Provider access tokens are not retained in FinDex application storage.</p>
+    <p>The UUID links your account to your FinDex records and is also used as your RevenueCat App User ID so purchases can be associated with the signed-in account. A profile table can store an optional display name.</p>
 
     <h3>Aquarium and fish records</h3>
     <p>You may create tank records containing a name, water type, volume, temperature, setup date, cover image, notes, and timestamps. You may create fish or livestock records containing a tank assignment, selected or entered species names, custom name, quantity, acquisition date, health status, photo, notes, and timestamps. These records are linked to your account and stored through Supabase.</p>
@@ -87,10 +88,10 @@
       <li><strong>Supabase:</strong> authentication, PostgreSQL database, private image Storage, Edge Functions, and operational logs.</li>
       <li><strong>OpenAI:</strong> user-requested text and image analysis through the Responses API.</li>
       <li><strong>RevenueCat:</strong> subscription offerings, purchase and restore support, customer records, entitlement verification, and subscription management.</li>
-      <li><strong>Apple:</strong> iOS distribution, App Store purchases, subscription billing, refunds, TestFlight, and optional platform diagnostics.</li>
+      <li><strong>Apple:</strong> optional Sign in with Apple, iOS distribution, App Store purchases, subscription billing, refunds, TestFlight, and optional platform diagnostics.</li>
       <li><strong>Expo/EAS:</strong> managed builds, signing and distribution workflows, app updates, and related operational logs.</li>
       <li><strong>GitHub Pages:</strong> static hosting for this public website and ordinary website request logs.</li>
-      <li><strong>Google:</strong> delivery and storage of messages sent to the public support mailbox.</li>
+      <li><strong>Google:</strong> optional basic-profile OAuth sign-in and delivery/storage of messages sent to the public support mailbox.</li>
     </ul>
     <p>We may also disclose information when required by law, to respond to valid legal process, or when reasonably necessary to protect users, FinDex, service providers, or others.</p>
 
@@ -103,7 +104,7 @@
 
     <h2>8. Editing records, deleting photos, and account deletion</h2>
     <p>You can edit tank and fish details in the app. Deleting a tank removes its tank photo and related tank reports and leaves fish records in the library without a tank. Deleting a fish removes its saved fish photo and record. Replacing a saved record photo causes FinDex to attempt removal of the previous image.</p>
-    <p>To delete the entire FinDex account, open <strong>Settings</strong>, choose <strong>Delete Account</strong>, review the information, enter the current password, type <strong>DELETE</strong>, and confirm. The server first removes account-owned image objects, then deletes the Supabase authentication account. Database relationships are configured to remove the active profile, tanks, fish, scans, AI results, chats, care reports, consent, allowance and usage records, deletion-attempt record, and FinDex subscription-status cache.</p>
+    <p>To delete the entire FinDex account, open <strong>Settings</strong>, choose <strong>Delete Account</strong>, review the information, type <strong>DELETE</strong>, and confirm your identity with a connected sign-in method. If Apple is connected, FinDex requires a fresh Apple confirmation and attempts to revoke the Apple app authorization before deleting the account. The server removes account-owned image objects, then deletes the Supabase authentication account. Database relationships are configured to remove the active profile, tanks, fish, scans, AI results, chats, care reports, consent, allowance and usage records, deletion-attempt record, and FinDex subscription-status cache.</p>
     <p>Account deletion is designed to remove active FinDex application data immediately after successful confirmation, while provider backups and independent processor records may age out later. RevenueCat customer deletion is requested during the flow; if it cannot be confirmed, the app reports that processor cleanup remains pending. Apple and RevenueCat may retain transaction records for store, fraud, accounting, or legal purposes.</p>
     <div class="callout warning">
       <p><strong>Deleting a FinDex account does not cancel an Apple subscription.</strong> Manage or cancel FinDex Pro separately in Apple subscription settings.</p>
