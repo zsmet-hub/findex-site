@@ -20,8 +20,7 @@ const types = {
 
 createServer((request, response) => {
   const requested = new URL(request.url ?? '/', `http://${request.headers.host ?? '127.0.0.1'}`).pathname;
-  const projectPath = requested === '/findex-site' ? '/' : requested.replace(/^\/findex-site\/?/, '/');
-  let candidate = normalize(join(root, decodeURIComponent(projectPath)));
+  let candidate = normalize(join(root, decodeURIComponent(requested)));
   if (!candidate.startsWith(`${root}${sep}`) && candidate !== root) {
     response.writeHead(400).end('Bad request');
     return;
@@ -34,5 +33,5 @@ createServer((request, response) => {
   });
   createReadStream(candidate).pipe(response);
 }).listen(port, '127.0.0.1', () => {
-  console.log(`FinDex site: http://127.0.0.1:${port}/findex-site/`);
+  console.log(`FinDex site: http://127.0.0.1:${port}/`);
 });

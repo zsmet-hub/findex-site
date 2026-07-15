@@ -31,7 +31,7 @@ for (const field of ['appName', 'tagline', 'legalOperatorName', 'publicSupportEm
 if (!Number.isInteger(config.minimumAge) || config.minimumAge < 13) fail('minimumAge must be an explicit integer of at least 13.');
 if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(config.publicSupportEmail ?? '')) fail('Public support email is invalid.');
 if (!/^https:\/\//.test(config.websiteOrigin ?? '')) fail('Production website origin must use HTTPS.');
-if (!/^\/[A-Za-z0-9/_-]*\/$/.test(config.siteBasePath ?? '')) fail('siteBasePath must start and end with a slash.');
+if (!/^\/(?:[A-Za-z0-9_-]+\/)*$/.test(config.siteBasePath ?? '')) fail('siteBasePath must be root or start and end with a slash.');
 
 function collectFiles(directory) {
   return readdirSync(directory).flatMap((name) => {
